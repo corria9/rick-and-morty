@@ -18,6 +18,9 @@ const Pagination = ({info, pageNumber, SetPageNumber}) => {
             pageCount={info?.pages}
             //si estamos en la pgina 1 y pulsamos prev se mantendra en la pagina 1
             forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+            previousClassName="btn prev"
+            nextClassName="btn next"
+            pageLinkClassName="page-link link-dark"
         />
     </>
   )

@@ -42,24 +42,23 @@ function Filter({setStatus, setGender, setSpecies, SetPageNumber, status, gender
       };
 
   return (
-    <div >
-        <div>Filtros</div>
+    <div className='px-3'>
+        <div className='text-center fw-bold fs-4 mb-2'>Filtros</div>
         <div style={{cursor: "pointer"}} 
                 onClick={clear} 
-                >
+                className="text-dark text-decoration-underline text-center mb-3">
             Limpiar Filtros
         </div>
 
-    <div id="accordionExample">
-        
-        <div>
-            <h2 id="panelStayOpne-headingOne">
-                <button type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+    <div className="accordion" id="accordionExample"> 
+        <div className='accordion-item'>
+            <h2 className="accordion-header" id="panelStayOpne-headingOne">
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                     Estatus
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" aria-labelledby="panelsStayOpen-headingOne" >
-                <div>
+            <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne" >
+                <div className="accordion-body">
                     {status1.map((g, index) => <div key={index}>
                         <input key={index} onChange={handleChangeStatus} type="radio" value={g} name={g} checked={status === g ? true : false}  /> {g}
                     </div>)}
@@ -67,14 +66,14 @@ function Filter({setStatus, setGender, setSpecies, SetPageNumber, status, gender
             </div>
         </div>
 
-        <div> 
-            <h2 id="panelsStayOpen-headingTwo">
-                <button type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        <div className='accordion-item'> 
+            <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                     Genero
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseTwo" aria-labelledby="panelsStayOpen-headingTwo">
-                <div>
+            <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div className="accordion-body">
                     {genders.map((g, index) => <div key={index}>
                     <input key={index} onChange={handleChangeGender} type="radio" value={g} name={g} checked={gender === g ? true : false} />  {g}
                     </div>)}
@@ -82,14 +81,14 @@ function Filter({setStatus, setGender, setSpecies, SetPageNumber, status, gender
             </div>
         </div>
 
-        <div> 
-            <h2 id="panelsStayOpen-headingThree">
-                <button type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        <div className='accordion-item'> 
+            <h2 className="accordion-header" id="panelsStayOpen-headingThree">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                     Especies
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseThree" aria-labelledby="panelsStayOpen-headingThree">
-                <div>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div className="accordion-body d-flex flex-wrap gap-3">
                     {species1.map((g, index) => <div key={index}>
                     <input key={index} onChange={handleChangeSpecies} type="radio" value={g} name={g} checked={species === g ? true : false} />  {g}
                     </div>)}

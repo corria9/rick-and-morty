@@ -20,8 +20,8 @@ function CharacterDetail() {
     return (
         <div>
             <h2 className='text-center'>{detail.name}</h2>
-            <img src={detail.image} alt={detail.name}></img>
-            <div>
+            <img src={detail.image} className="rounded mx-auto d-block" alt={detail.name}></img>
+            <div className="text-center fw-bold my-2">
                 <p>{`Genero: ${detail.gender}`}</p>
                 <p>{`Estatus: ${detail.status}`}</p>
                 <p>{`Especie: ${detail.species}`}</p>

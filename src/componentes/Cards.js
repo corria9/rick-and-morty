@@ -5,12 +5,12 @@ import {addCharacterFavorite} from '../redux/actions/index'
 
 function Cards({name, image, id, addCharacterFavorite}) {
   return (
-    <div>
-        <img src={image} alt={name} />
-        <div>
-            <h5>{name}</h5>
-            <Link to={`/character/${id}`}>+ Info</Link>
-            <button onClick={() => addCharacterFavorite({name, image, id})}>Favoritos*</button>
+    <div className="card mb-3" style={{width: "18rem"}}>
+        <img src={image} className="card-img-top" alt={name} />
+        <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <Link to={`/character/${id}`} className="btn btn-secondary">+ Info</Link>
+            <button onClick={() => addCharacterFavorite({name, image, id})} className="btn btn-dark mx-2">Favoritos*</button>
         </div>
     </div>
   )
