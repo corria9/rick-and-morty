@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {deleteCharacterFavorite} from '../redux/actions/index'
 import { Link } from 'react-router-dom'
@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 function Favorites() {
 
   const favorites = useSelector(state => state.favorites);
-
   const dispatch = useDispatch();
 
   return (
@@ -16,8 +15,8 @@ function Favorites() {
         <img src={f.image} alt={f.name} />
         <div>
             <h5>{f.name}</h5>
-            <Link to={`/character/${f.id}`}>Mas Info</Link>
-            <button onClick={() => dispatch(deleteCharacterFavorite(f.id))}>Eliminar Favorito</button>
+            <Link to={`/character/${f.id}`}>+ Info</Link>
+            <button onClick={() => dispatch(deleteCharacterFavorite(f.id))}>Eliminar</button>
         </div>
       </div>)}
     </div>

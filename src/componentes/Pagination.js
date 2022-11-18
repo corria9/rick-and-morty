@@ -6,17 +6,6 @@ const Pagination = ({info, pageNumber, SetPageNumber}) => {
     let pageChange = (event) => {
         SetPageNumber(event.selected + 1);
     };
-
-    // const [width, setWidth] = useState(window.innerWidth);
-    // const updateDimensions = () => {
-    //     setWidth(window.innerWidth);
-    // };
-
-    // useEffect(() => {
-    //     window.addEventListener("resize", updateDimensions);
-    //     return () => window.removeEventListener("resize", updateDimensions);
-    // }, []);
-
   return (
     <>
         <ReactPaginate 
