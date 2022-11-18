@@ -3,14 +3,14 @@ import React from 'react'
 function Filter({setStatus, setGender, setSpecies, SetPageNumber, status, gender, species}) {
 
     let genders = ["Mujer", "Hombre", "Sin Genero", "Desconocido"];
-      let status1 = ["Vivo", "Muerto", "Desconocido"];
+      let status1 = ["Alive", "Dead", "Unknown"];
       let species1 = [
-        "Humano",
+        "Human",
         "Alien",
-        "Humanoide",
+        "Humanoid",
         "Poopybutthole",
         "Mythological",
-        "Desconocido",
+        "Unknown",
         "Animal",
         "Disease",
         "Robot",
@@ -34,9 +34,9 @@ function Filter({setStatus, setGender, setSpecies, SetPageNumber, status, gender
       }
 
       let clear = () => {
-        setStatus("");
-        setGender("");
-        setSpecies("");
+        setStatus('');
+        setGender('');
+        setSpecies('');
         SetPageNumber(1);
         window.location.reload(false);
       };
