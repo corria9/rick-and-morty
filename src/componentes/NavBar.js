@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import Logo from '../img/logo.png'
 
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -8,7 +9,9 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light navbar-dark bg-dark">
         <div className="container-fluid">
-            <Link className="navbar-brand" to='/'>[Rick & Morty]</Link>
+            <Link className="navbar-brand" to='/'>
+            <img src={Logo} className="mx-2" width="150"/>
+            </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

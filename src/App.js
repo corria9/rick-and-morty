@@ -8,6 +8,7 @@ import Episode from './componentes/Episode';
 
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 import CharacterDetail from './componentes/CharacterDetail';
+import Footer from './componentes/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/location' element={<Location />} />
           <Route path='/episode' element={<Episode />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
